@@ -1,0 +1,11 @@
+service aee_aed /system/bin/aee_aed
+    group root readproc
+    writepid /dev/cpuset/system-background/tasks
+    onrestart restart aee_aedv
+    onrestart restart aee_aedv64
+
+service aee-reinit /system/bin/aee_aed --reinit
+    oneshot
+    disabled
+    user root
+    group root

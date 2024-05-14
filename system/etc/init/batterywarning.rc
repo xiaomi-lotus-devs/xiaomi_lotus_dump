@@ -1,0 +1,6 @@
+#monitor battery status
+service batterywarning /system/bin/batterywarning
+    class main
+    user system
+    group system
+

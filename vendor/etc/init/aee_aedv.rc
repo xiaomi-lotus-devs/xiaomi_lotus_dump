@@ -1,0 +1,9 @@
+service aee_aedv /vendor/bin/aee_aedv
+    group root readproc
+    writepid /dev/cpuset/system-background/tasks
+
+service aeev-reinit /vendor/bin/aee_aedv --reinit
+    oneshot
+    disabled
+    user root
+    group root

@@ -1,0 +1,35 @@
+on post-fs-data
+    mkdir /data/log_temp 0755 system system
+    mkdir /data/misc/mblog 0755 system system
+
+service mobile_log_d /system/bin/mobile_log_d
+    class main
+
+service mmedialogstart /system/bin/mobile_log_d --ftrace mmedia
+    oneshot
+    disabled
+
+service bsplogstart /system/bin/mobile_log_d --ftrace bsp
+    oneshot
+    disabled
+
+service trace_buf_off /system/bin/mobile_log_d --ftrace off
+    oneshot
+    disabled
+
+# ftrace log buffer control
+on property:ftrace.buffer.log=mmedia
+    start mmedialogstart
+
+on property:ftrace.buffer.log=bsp
+    start bsplogstart
+
+on property:ftrace.buffer.log=off
+    start trace_buf_off
+
+# MTK PR_DEBUG SWITCH
+on property:debug.MB.prdebug=1
+    write /sys/kernel/debug/dynamic_debug/control "file *mediatek* +p"
+    write /sys/kernel/debug/dynamic_debug/control "file *gpu* -p"
+on property:debug.MB.prdebug=0
+    write /sys/kernel/debug/dynamic_debug/control "file *mediatek* -p"

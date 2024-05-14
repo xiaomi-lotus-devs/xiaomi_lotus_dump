@@ -1,0 +1,4 @@
+<permissions>
+    <library name="global_android-support-v13" file="/system/framework/android-support-v13.jar"/>
+    <library name="global_miui11_android_empty" file="/system/priv-app/GlobalMinusScreen/GlobalMinusScreen.apk"/>
+</permissions>

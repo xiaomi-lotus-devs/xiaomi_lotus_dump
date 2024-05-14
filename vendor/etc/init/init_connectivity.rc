@@ -1,0 +1,38 @@
+# MTK connectivity .rc configure
+
+on boot
+
+# WMT
+service wmt_loader /vendor/bin/wmt_loader
+    class core
+    user root
+    group root
+    oneshot
+
+service wmt_launcher /vendor/bin/wmt_launcher -p /vendor/firmware/
+    user system
+    group system
+    class core
+
+on property:ro.build.type=eng
+    write /sys/kernel/debug/tracing/tracing_on 1
+
+on property:persist.mtk.wcn.coredump.mode=1
+    start stp_dump
+
+on property:persist.mtk.wcn.coredump.mode=2
+    start stp_dump
+
+on property:init.svc.stp_dump=running && property:persist.mtk.wcn.coredump.mode=0
+    stop stp_dump
+
+on property:service.wcn.driver.ready=yes && property:persist.mtk.wcn.coredump.mode=*
+    write /proc/driver/wmt_dbg "0x15 ${persist.mtk.wcn.coredump.mode}"
+
+service stp_dump /vendor/bin/stp_dump3
+    user system
+    group system sdcard_rw misc
+    class core
+    disabled
+    oneshot
+

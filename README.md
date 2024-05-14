@@ -1,0 +1,20 @@
+## lotus-user 8.1.0 O11019 V11.0.10.0.OFIMIXM release-keys
+- Manufacturer: xiaomi
+- Platform: mt6765
+- Codename: lotus
+- Brand: xiaomi
+- Flavor: lotus-user
+- Release Version: 8.1.0
+- Kernel Version: 4.9.77
+- Id: O11019
+- Incremental: V11.0.10.0.OFIMIXM
+- Tags: release-keys
+- CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
+- A/B Device: false
+- Treble Device: true
+- Locale: en-GB
+- Screen Density: 480
+- Fingerprint: xiaomi/lotus/lotus:8.1.0/O11019/V11.0.10.0.OFIMIXM:user/release-keys
+- OTA version: 
+- Branch: lotus-user-8.1.0-O11019-V11.0.10.0.OFIMIXM-release-keys
+- Repo: xiaomi_lotus_dump

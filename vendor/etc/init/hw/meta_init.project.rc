@@ -1,0 +1,21 @@
+#INTERNAL_START
+on post-fs
+
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+on boot
+
+service spm_script /vendor/bin/spm_loader
+    user system
+    group system
+    oneshot
+
+#add charge_logger
+service charge_logger /vendor/bin/charge_logger
+    class main
+    user root
+    group system
+    oneshot
+#INTERNAL_END

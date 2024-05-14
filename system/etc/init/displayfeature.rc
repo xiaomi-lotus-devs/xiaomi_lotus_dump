@@ -1,0 +1,3 @@
+service displayfeature /system/bin/displayfeature
+    class main
+

@@ -1,0 +1,13 @@
+# MTK platform .rc configure
+service md_monitor /system/bin/md_monitor
+    class main
+    user system
+    group system radio sdcard_rw inet sdcard_r media_rw
+    disabled
+    oneshot
+
+on property:persist.mdmmonitor=0
+    stop md_monitor
+
+on property:persist.mdmmonitor=1
+    start md_monitor

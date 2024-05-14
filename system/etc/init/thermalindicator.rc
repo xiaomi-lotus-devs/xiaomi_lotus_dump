@@ -1,0 +1,11 @@
+# Thermal Indicator Service
+
+service ThermalIndicator /system/bin/thermalindicator
+	class core
+	disabled
+
+on property:debug.mtk.thermalindicator=0
+	stop ThermalIndicator
+
+on property:debug.mtk.thermalindicator=1
+	start ThermalIndicator

@@ -1,0 +1,8 @@
+service camerahalserver /vendor/bin/hw/camerahalserver
+    class main
+    user cameraserver
+    group audio camera input drmrpc sdcard_rw system media graphics wakelock
+    ioprio rt 4
+    capabilities SYS_NICE
+    capabilities BLOCK_SUSPEND SYS_NICE
+    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks

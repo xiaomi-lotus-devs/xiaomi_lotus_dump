@@ -1,0 +1,7 @@
+# Program binary service
+service program_binary /system/bin/program_binary_service
+    class late_start
+    user system
+    group graphics
+    oneshot
+

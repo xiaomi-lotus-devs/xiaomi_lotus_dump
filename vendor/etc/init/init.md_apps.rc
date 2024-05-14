@@ -1,0 +1,6 @@
+on boot
+     setprop ro.md_apps.support 1
+     setprop ro.md_apps.load_type user
+     setprop ro.md_apps.load_verno "MOLY.LR12A.R2.MP.V42.P29"
+     setprop ro.md_apps.load_gencfg "GEN93_USER"
+     setprop ro.md_apps.load_date "2019/05/27 15:20:42 GMT +08:00"

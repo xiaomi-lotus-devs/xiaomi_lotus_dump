@@ -1,0 +1,6 @@
+service emdlogger2 /system/bin/emdlogger2
+    class main
+    user shell
+    group system shell radio sdcard_rw inet sdcard_r media_rw
+    disabled
+    oneshot

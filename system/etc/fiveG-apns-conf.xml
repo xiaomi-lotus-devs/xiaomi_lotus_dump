@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<apns version="8">
+    <apn carrier="SK Telecom"
+        mcc="450"
+        mnc="05"
+        apn="5g.sktelecom.com"
+        type="default,supl,dun"
+        protocol="IPV4V6"
+        roaming_protocol="IP"
+    />
+
+    <apn carrier="KT"
+        mcc="450"
+        mnc="08"
+        apn="internet"
+        type="default,supl,dun"
+        protocol="IPV4V6"
+        roaming_protocol="IP"
+    />
+</apns>

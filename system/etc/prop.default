@@ -1,0 +1,21 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.miui.has_cust_partition=true
+ro.secureboot.devicelock=1
+ro.channelid.ucnewsintl=/system/etc/ucintlconfiginfo
+ro.booking.channel.path=/cust/etc/.booking.data.aid
+ro.appsflyer.preinstall.path=/cust/etc/pre_install.appsflyer
+ro.secure=1
+security.perf_harden=1
+ro.adb.secure=1
+ro.allow.mock.location=0
+ro.debuggable=0
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Fri Jan 8 21:43:26 CST 2021
+ro.bootimage.build.date.utc=1610113406
+ro.bootimage.build.fingerprint=xiaomi/lotus/lotus:8.1.0/O11019/V11.0.10.0.OFIMIXM:user/release-keys
+persist.sys.usb.config=none
+

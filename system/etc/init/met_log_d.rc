@@ -1,0 +1,3 @@
+service met_log_d /system/bin/met_log_d
+    class main
+
